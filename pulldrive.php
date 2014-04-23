@@ -28,7 +28,7 @@ if ($zip->open($filename, ZipArchive::CREATE)!==TRUE) {
 $zip->addFile("shop.csv");
 $zip->addFile("gym.csv");
 $zip->addFile("metro.csv");
-$zip->addFile("sales.xls");
+//$zip->addFile("Deep_Blue_Finances.xlsx");
 
 //Status Screen
 //echo "numfiles: " . $zip->numFiles . "\n";

@@ -16,9 +16,10 @@
 	}
 	 
 	body {
-	    background: #eaedf1;
+	    background: #3686be;
 	    margin: 0 auto;
-	    width: 600px;
+	    width: 400px;
+	    color: #fff;
 	}
 	 
 	body, input, textarea {
@@ -27,7 +28,7 @@
 	 
 	.container {
 	    max-width: 25em;
-	    margin: 2em auto;
+	    margin: 0 auto;
 	    width: 95%;
 	     
 	}
@@ -36,26 +37,28 @@
 	    font-size: 1.5em; 
 	    padding: .5em 0;
 	    text-align: center; 
-	    background: #323a45;
+	    background: #19486a;
 	    color: white;
-	    border-radius: 5px 5px 0 0;
+	    border-radius: 5px;
 	}
 
-	button {
+	button, .form {
 	    color: #fff;
 	    border-radius: 4px;
 	    font-size: 16px;
 	    outline: none;
 	    padding: 10px;
-	    background-color: #2980b9;
+	    background-color: #7DB461;
 	    border: 0;
+	    margin-left: 150px;
 	    cursor: pointer;
-	    position: absolute;
-    	left: 46%;
 	}
-	button:hover {
-	    background-color: #3498db;
-	}   
+	button:hover, .form:hover {
+	    background-color: #6ba44e;
+	}
+	button#bigger {
+    	margin-left: 125px;
+	}
 	</style>
 </head>
 <body>
@@ -68,6 +71,14 @@
 
 
 		<?php echo "<a href=./" . $filename . "><button>Download</button></a>"; ?>
+		<br />
+		<br />
+		<a href="javascript:history.go(0)"><button id="bigger">Refresh the page</button></a>
+		<br />
+		<br />
+		<form method="post" action="clear.php">
+		<input name="go" type="submit" class="form" value="Refresh" />
+		</form>
 
 	</div>
 	

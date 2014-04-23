@@ -4,14 +4,13 @@ When using multiple spreadsheets in Google Drive, the `=IMPORTRANGE()` can pull 
 
 The insoiration for PullDrive came from an accountant that needed Annaul Data from 3 stores for all 52 weeks. So `=IMPORTRANGE()` was not going to work.
 
-##How PullDrive Works
+###How PullDrive Works
 
 Using the `pulldrive.php` file, you will need
 
 * The Google Drive Spreadsheet URL
 * A directory folder to save everything in
 
------
 ###Set Up
 
 >The set up takes about 5/10 minutes at the moment but I am looking to make an easy to use config file in future versions.
@@ -24,11 +23,20 @@ Using the `pulldrive.php` file, you will need
 6. Name your file in the `$filename = "FILE-NAME.zip";`
 7. That's it.
 
+**NOTE:** If you call a file in the `$zip->addFile` section that is not called in in the `file_put_contents` section the zip will not work. If you don't use it, lose it!
+
 ###Usage
 
 Head to the `index.php` file on your server. This will pull the data from Google Drive, save it on your server and give you the option to download from the browser. 
 
 This is usually quick but load times will vary depending on the size of your Google Spreadsheet.
+
+**Issues:** I have found that on Excel for Mac, if you link to a cell and then update the csv, it sometimes reports an invalid file format. To fix this, just open the Workbook and the csv and Excel will update the links for you with no issue.
+
+#####Changelog
+
+v1: Initial Commit
+v1.1: Update to index.php
 
 ####Questions?
 
