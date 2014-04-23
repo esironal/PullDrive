@@ -33,6 +33,10 @@ This is usually quick but load times will vary depending on the size of your Goo
 
 **Issues:** I have found that on Excel for Mac, if you link to a cell and then update the csv, it sometimes reports an invalid file format. To fix this, just open the Workbook and the csv and Excel will update the links for you with no issue.
 
+###The Clear-down
+
+If you keep running PullDrive, it will keep adding new csvs into the zip folder. Not great so instead, make sure you use the Clear-down function to remove old csv's and zip's and keep the PullDrive data fresh.
+
 #####Changelog
 
 v1: Initial Commit
