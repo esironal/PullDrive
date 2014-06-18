@@ -39,8 +39,10 @@ If you keep running PullDrive, it will keep adding new csvs into the zip folder.
 
 #####Changelog
 
-v1: Initial Commit
-v1.1: Update to index.php
+* v1: Initial Commit
+* v1.1: Update to `index.php`
+* v1.2: `Clear.php` redesigned, directory organisation for `php` files
+
 
 ####Questions?
 

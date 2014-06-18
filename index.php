@@ -4,62 +4,9 @@
 	<meta charset="UTF-8">
 	<title>PullDrive</title>
 	<?php 
-		include_once "pulldrive.php";
+		include_once "./php/pulldrive.php";
 	?>
-	<style>
-	/* General
-	==================================== */
-	*, *:before, *:after {
-	    -moz-box-sizing: border-box; 
-	    -webkit-box-sizing: border-box; 
-	    box-sizing: border-box;
-	}
-	 
-	body {
-	    background: #3686be;
-	    margin: 0 auto;
-	    width: 400px;
-	    color: #fff;
-	}
-	 
-	body, input, textarea {
-	    font: 1em/1.5 Arial, Helvetica, sans-serif;
-	}
-	 
-	.container {
-	    max-width: 25em;
-	    margin: 0 auto;
-	    width: 95%;
-	     
-	}
-	 
-	h1 {
-	    font-size: 1.5em; 
-	    padding: .5em 0;
-	    text-align: center; 
-	    background: #19486a;
-	    color: white;
-	    border-radius: 5px;
-	}
-
-	button, .form {
-	    color: #fff;
-	    border-radius: 4px;
-	    font-size: 16px;
-	    outline: none;
-	    padding: 10px;
-	    background-color: #7DB461;
-	    border: 0;
-	    margin-left: 150px;
-	    cursor: pointer;
-	}
-	button:hover, .form:hover {
-	    background-color: #6ba44e;
-	}
-	button#bigger {
-    	margin-left: 125px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
@@ -73,12 +20,15 @@
 		<?php echo "<a href=./" . $filename . "><button>Download</button></a>"; ?>
 		<br />
 		<br />
-		<a href="javascript:history.go(0)"><button id="bigger">Refresh the page</button></a>
+		<a href="javascript:history.go(0)"><button>Refresh the page</button></a>
 		<br />
 		<br />
 		<form method="post" action="clear.php">
-		<input name="go" type="submit" class="form" value="Refresh" />
+		<input name="go" type="submit" value="Clear Old" />
 		</form>
+		<p>Click Download to pull through the latest data. It is best if you press Clear Old first too as this removes the old downloads.</p>
+		<p>If the Download does not work, try pressing CTRL + R to refresh the page.</p>
+		<h2>&copy; Deep Blue Sports <?php echo date("Y");?></h2>
 
 	</div>
 	
